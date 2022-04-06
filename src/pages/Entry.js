@@ -1,18 +1,18 @@
-import * as React from 'react'
-import { useNavigate } from 'react-router-dom'
-import Box from '@mui/material/Box'
-import InputLabel from '@mui/material/InputLabel'
-import MenuItem from '@mui/material/MenuItem'
-import FormControl from '@mui/material/FormControl'
-import Select from '@mui/material/Select'
+import * as React from "react";
+import { useNavigate } from "react-router-dom";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
 function Entry({ companies = [], onSelectCompany = () => {} }) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
-    onSelectCompany(event.target.value)
-    navigate('billing')
-  }
+    onSelectCompany(event.target.value);
+    navigate("billing");
+  };
 
   return (
     <React.Fragment>
@@ -26,12 +26,22 @@ function Entry({ companies = [], onSelectCompany = () => {} }) {
             label="Company"
             onChange={handleChange}
           >
-            {companies.map((company) => (<MenuItem key={company.id} value={company}>{company.name}</MenuItem>))}
+            {companies.map((company) => (
+              <MenuItem
+                // onClick={() => {
+                //   alert(company.id);
+                // }}
+                key={company.id}
+                value={company}
+              >
+                {company.name}
+              </MenuItem>
+            ))}
           </Select>
         </FormControl>
       </Box>
     </React.Fragment>
-  )
+  );
 }
 
-export default Entry
+export default Entry;
