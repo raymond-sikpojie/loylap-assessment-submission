@@ -29,7 +29,7 @@ function Entry({ companies = [], onSelectCompany = () => {} }) {
             {companies.map((company) => (
               <MenuItem
                 // onClick={() => {
-                //   alert(company.id);
+                //   console.log(company);
                 // }}
                 key={company.id}
                 value={company}

@@ -6,9 +6,9 @@ import Card from "../components/Card";
 
 function Billing({ plans = [], cards = [], company = null }) {
   const navigate = useNavigate();
-  console.log(company);
-  console.log(plans);
-  console.log(cards);
+  // console.log(company);
+  // console.log(plans);
+  //console.log(cards);
 
   if (!company) {
     navigate("/");
@@ -24,7 +24,7 @@ function Billing({ plans = [], cards = [], company = null }) {
           src="assets/placeholders/plan_placeholder.svg"
           alt="Payment plan component placeholder"
         />
-        <Plan />
+        <Plan company={company} plans={plans} />
 
         <h3>Payment Method</h3>
         {/*TODO: delete this and replace with your UI component*/}
