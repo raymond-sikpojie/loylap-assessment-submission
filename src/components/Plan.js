@@ -23,11 +23,14 @@ export default function Plan({ company, plans }) {
     setPlanName(planData.name);
     setPlanDescription(planData.description);
     setPlanValue(planData.value);
+    console.log(planName);
+    console.log(planDescription);
+    console.log(planValue);
   };
 
   useEffect(() => {
     getPlan();
-  }, [planName, planDescription, planValue]);
+  }, []);
 
   return (
     <div>
