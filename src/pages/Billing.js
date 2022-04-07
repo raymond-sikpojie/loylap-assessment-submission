@@ -6,9 +6,6 @@ import Card from "../components/Card";
 
 function Billing({ plans = [], cards = [], company = null }) {
   const navigate = useNavigate();
-  // console.log(company);
-  // console.log(plans);
-  //console.log(cards);
 
   if (!company) {
     navigate("/");

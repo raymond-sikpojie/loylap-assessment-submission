@@ -35,7 +35,7 @@ export default function Card({ company, cards }) {
   }, []);
 
   /**
-   * render image base on the type of card it is.
+   * render image depending on the type of card it is.
    */
   const renderImage = () => {
     return (

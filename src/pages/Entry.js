@@ -27,13 +27,7 @@ function Entry({ companies = [], onSelectCompany = () => {} }) {
             onChange={handleChange}
           >
             {companies.map((company) => (
-              <MenuItem
-                // onClick={() => {
-                //   console.log(company);
-                // }}
-                key={company.id}
-                value={company}
-              >
+              <MenuItem key={company.id} value={company}>
                 {company.name}
               </MenuItem>
             ))}
