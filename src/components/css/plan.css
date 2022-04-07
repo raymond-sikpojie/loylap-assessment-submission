@@ -6,6 +6,7 @@ border-radius: 10px;
 padding: 5px 30px ; 
 display: flex;
 flex-direction: column;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 .plan_container_1{
