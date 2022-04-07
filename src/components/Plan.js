@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import "./css/plan.css";
 
 export default function Plan({ company, plans }) {
   /**
    * The company object and plans array are passed as props.
-   * set the plan value in the company object to a variable companyPlan.
+   * set the value of plan in the company object to a variable companyPlan.
    */
   const { plan: companyPlan } = company;
 
@@ -30,12 +31,16 @@ export default function Plan({ company, plans }) {
   }, []);
 
   return (
-    <div>
-      {planName}
-      <br />
-      {planDescription}
-      <br />
-      {planValue}
+    <div className="plan_container">
+      <div className="container_1">
+        <p className="plan_name">{planName}</p>
+        <p className="plan_value">
+          <p className="plan_digit">€{planValue}.00</p>
+          <span className="plan_month">/month</span>
+        </p>
+      </div>
+      <p className="plan_description">{planDescription}</p>
+      <button className="plan_button">Change Plan</button>
     </div>
   );
 }
