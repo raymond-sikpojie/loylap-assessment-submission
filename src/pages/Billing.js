@@ -20,18 +20,10 @@ function Billing({ plans = [], cards = [], company = null }) {
       <Box>
         <h3>Current Plan</h3>
         {/*TODO: delete this and replace with your UI component*/}
-        {/* <img
-          src="assets/placeholders/plan_placeholder.svg"
-          alt="Payment plan component placeholder"
-        /> */}
         <Plan company={company} plans={plans} />
 
         <h3>Payment Method</h3>
         {/*TODO: delete this and replace with your UI component*/}
-        <img
-          src="assets/placeholders/card_placeholder.svg"
-          alt="Card component placeholder"
-        />
         <Card company={company} cards={cards} />
       </Box>
     </React.Fragment>

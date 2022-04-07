@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import mastercard from "../images/mastercard.svg";
 import visa from "../images/visa.svg";
+import "../components/css/card.css";
 
 export default function Card({ company, cards }) {
   /**
@@ -38,7 +39,7 @@ export default function Card({ company, cards }) {
    */
   const renderImage = () => {
     return (
-      <div>
+      <div className="images">
         {cardType === "mastercard" ? (
           <img src={mastercard} />
         ) : (
@@ -49,11 +50,21 @@ export default function Card({ company, cards }) {
   };
 
   return (
-    <div>
-      {renderImage()}
-      <p>{cardType}</p>
-      <p>{lastFourDigits}</p>
-      <p>{cardExpiry}</p>
+    <div className="card_container">
+      <div className="card_container_1">
+        {renderImage()}
+        <p className="card_title">Credit Card</p>
+      </div>
+      <button className="card_button">Change</button>
+      <div className="card_container_2">
+        <p className="card_digits">
+          <span>****</span>
+          <span>****</span>
+          <span>****</span>
+          <span>{lastFourDigits}</span>
+        </p>
+        <p className="card_expiry">Expiry date {cardExpiry}</p>
+      </div>
     </div>
   );
 }

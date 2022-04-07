@@ -32,7 +32,7 @@ export default function Plan({ company, plans }) {
 
   return (
     <div className="plan_container">
-      <div className="container_1">
+      <div className="plan_container_1">
         <p className="plan_name">{planName}</p>
         <p className="plan_value">
           <p className="plan_digit">€{planValue}.00</p>
